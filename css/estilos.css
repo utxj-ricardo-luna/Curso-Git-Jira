@@ -1,0 +1,531 @@
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+    --cafe-oscuro: #2b1a12;
+    --cafe: #6f4228;
+    --cafe-claro: #a66a43;
+    --crema: #f7f1e8;
+    --beige: #e7d4bd;
+    --blanco: #ffffff;
+    --gris: #77716c;
+}
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--cafe-oscuro);
+    background: var(--crema);
+}
+
+section {
+    scroll-margin-top: 70px;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.section-label {
+    display: inline-block;
+    color: var(--cafe-claro);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.section-label.light {
+    color: var(--beige);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 25px;
+}
+
+h2 span {
+    color: var(--cafe-claro);
+}
+
+p {
+    line-height: 1.8;
+    color: var(--gris);
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    background: rgba(43, 26, 18, 0.95);
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    color: var(--blanco) !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navbar-brand i {
+    color: var(--beige);
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    margin: 0 7px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--beige) !important;
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.btn-cafe {
+    background: var(--cafe-claro);
+    border: 2px solid var(--cafe-claro);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-cafe:hover {
+    background: var(--cafe);
+    border-color: var(--cafe);
+    color: white;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    background-image: url("../images/hero-cafe.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(35, 20, 13, 0.9),
+            rgba(35, 20, 13, 0.55),
+            rgba(35, 20, 13, 0.2)
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-subtitle {
+    letter-spacing: 4px;
+    font-size: 0.85rem;
+    color: var(--beige);
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 1;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: var(--beige);
+    display: block;
+}
+
+.hero p {
+    max-width: 600px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* =====================================================
+   NOSOTROS
+===================================================== */
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.about-stat {
+    border-left: 3px solid var(--cafe-claro);
+    padding-left: 15px;
+}
+
+.about-stat strong {
+    display: block;
+    font-size: 2rem;
+    color: var(--cafe);
+}
+
+.about-stat span {
+    color: var(--gris);
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.features-section {
+    padding: 80px 0;
+    background: var(--cafe-oscuro);
+}
+
+.feature-card {
+    padding: 30px;
+}
+
+.feature-card i {
+    font-size: 3rem;
+    color: var(--beige);
+}
+
+.feature-card h3 {
+    color: white;
+    margin: 20px 0 10px;
+}
+
+.feature-card p {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* =====================================================
+   MENÚ
+===================================================== */
+
+.menu-section {
+    background: #fffaf4;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: auto auto 50px;
+}
+
+.menu-filters .filter-btn {
+    color: var(--cafe);
+    border: 1px solid var(--beige);
+    margin: 5px;
+    border-radius: 30px;
+    padding: 8px 20px;
+}
+
+.menu-filters .filter-btn:hover,
+.menu-filters .filter-btn.active {
+    color: white;
+    background: var(--cafe);
+    border-color: var(--cafe);
+}
+
+.menu-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(43, 26, 18, 0.08);
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(43, 26, 18, 0.15);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.menu-card-body {
+    padding: 25px;
+}
+
+.menu-card-body h3 {
+    font-size: 1.3rem;
+}
+
+.menu-card-body p {
+    margin-bottom: 0;
+}
+
+.price {
+    color: var(--cafe-claro);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta-section {
+    padding: 100px 0;
+    background:
+        linear-gradient(
+            rgba(71, 40, 23, 0.9),
+            rgba(71, 40, 23, 0.9)
+        ),
+        url("../images/hero-cafe.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-section h2 {
+    max-width: 800px;
+    margin: 10px auto 20px;
+}
+
+.cta-section p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* =====================================================
+   GALERÍA
+===================================================== */
+
+.gallery img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.gallery div {
+    overflow: hidden;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   CONTACTO
+===================================================== */
+
+.contact-section {
+    background: var(--cafe-oscuro);
+}
+
+.contact-section h2 span {
+    color: var(--beige);
+}
+
+.contact-info {
+    margin-top: 30px;
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: white;
+}
+
+.contact-info i {
+    width: 40px;
+    color: var(--beige);
+    font-size: 1.2rem;
+}
+
+.contact-form {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.contact-form h3 {
+    margin-bottom: 25px;
+}
+
+.form-control {
+    border: 1px solid #ddd;
+    padding: 13px 15px;
+}
+
+.form-control:focus {
+    border-color: var(--cafe-claro);
+    box-shadow: 0 0 0 0.2rem rgba(166, 106, 67, 0.15);
+}
+
+#formMessage {
+    margin-top: 20px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #1c100b;
+    padding: 50px 0 25px;
+    color: white;
+}
+
+.footer-brand {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer-brand i {
+    color: var(--beige);
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.social-links a {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    margin-left: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--cafe-claro);
+    border-color: var(--cafe-claro);
+}
+
+footer hr {
+    border-color: rgba(255, 255, 255, 0.15);
+    margin: 35px 0 20px;
+}
+
+.copyright {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+
+/* =====================================================
+   BOTÓN TOP
+===================================================== */
+
+#btnTop {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: var(--cafe-claro);
+    color: white;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1000;
+
+    transition: 0.3s;
+}
+
+#btnTop:hover {
+    background: var(--cafe);
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .section-padding {
+        padding: 70px 0;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-buttons .btn {
+        margin: 5px 0 !important;
+        width: 100%;
+    }
+
+    .about-image img {
+        height: 350px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    .social-links {
+        margin-top: 20px;
+    }
+
+    .social-links a {
+        margin-left: 0;
+        margin-right: 8px;
+    }
+}
